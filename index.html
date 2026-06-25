@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noël Chalet Alpine: Website Development Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -27,7 +30,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--cream);
       color: var(--ink);
       -webkit-font-smoothing: antialiased;
@@ -77,7 +80,7 @@
     }
 
     .brand-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
       font-size: clamp(38px, 6vw, 64px);
       font-weight: 300;
       color: var(--white);
@@ -864,4 +867,653 @@
 
 <!-- ===================================================== -->
 <!-- SELECTION SCREEN                                       -->
-<!-- =========================================
+<!-- ===================================================== -->
+<div id="selection-screen">
+  <div class="selection-bg"></div>
+  <div class="selection-inner">
+
+    <div class="brand-lockup">
+      <p class="brand-eyebrow">Website Development Proposal</p>
+      <h1 class="brand-name">No<em>ë</em>l Chalet Alpine</h1>
+      <div class="divider-gold"></div>
+      <p class="brand-sub">Prepared by David Ajibua &nbsp;·&nbsp; June 25, 2026</p>
+    </div>
+
+    <p class="selection-label">Select a proposal to view</p>
+
+    <div class="proposal-cards">
+
+      <!-- PROPOSAL 1 -->
+      <div class="proposal-card" onclick="openProposal(1)">
+        <span class="card-tag standard">Standard</span>
+        <p class="card-number">Proposal 01</p>
+        <h2 class="card-title">Manual Payment Integration</h2>
+        <p class="card-desc">Full website with bank transfer payment flow. Students copy account details, confirm payment via WhatsApp, and the coach grants access manually. Clean, familiar, and zero transaction fees.</p>
+        <p class="card-price">&#x20A6;750,000</p>
+        <p class="card-price-usd">Approximately $450 USD</p>
+        <span class="card-cta">View Proposal &rarr;</span>
+      </div>
+
+      <!-- PROPOSAL 2 -->
+      <div class="proposal-card" onclick="openProposal(2)">
+        <span class="card-tag premium">Premium</span>
+        <p class="card-number">Proposal 02</p>
+        <h2 class="card-title">Flutterwave Integration</h2>
+        <p class="card-desc">Full website with automated Flutterwave payments. Students pay online in NGN or foreign currency and receive instant access to resources. No manual verification required.</p>
+        <p class="card-price">&#x20A6;1,000,000</p>
+        <p class="card-price-usd">Approximately $600 USD</p>
+        <span class="card-cta">View Proposal &rarr;</span>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="selection-footer">Both proposals include 12 months free maintenance and domain setup &nbsp;·&nbsp; </p>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- PROPOSAL 1: MANUAL PAYMENT                            -->
+<!-- ===================================================== -->
+<div id="proposal-1" class="proposal-view">
+
+  <nav class="prop-nav">
+    <span class="nav-brand">No<span>ë</span>l Chalet Alpine</span>
+    <div class="nav-right">
+      <span class="nav-tag p1">Proposal 01 : Manual Payment</span>
+      <button class="back-btn" onclick="goBack()">All Proposals</button>
+    </div>
+  </nav>
+
+  <div class="prop-hero">
+    <div class="prop-hero-bg"></div>
+    <div class="prop-hero-inner">
+      <p class="hero-eyebrow">Proposal 01 &nbsp;·&nbsp; Standard Package</p>
+      <h1 class="hero-title">Website Development<br><em>Manual Payment Integration</em></h1>
+      <p class="hero-desc">A complete, professional web presence for Noël Chalet Alpine. Students enroll, make bank transfers, confirm via WhatsApp, and the coach grants access to course materials. Simple, trusted, and built for how the business already operates.</p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Investment</span>
+          <span class="meta-value">&#x20A6;750,000</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <span class="meta-value">5 Weeks</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Maintenance</span>
+          <span class="meta-value">12 Months Free</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Domain</span>
+          <span class="meta-value">Included</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prop-content">
+
+    <!-- INTRO -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Introduction</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text">This proposal outlines the scope, design, and investment required to build a professional, full-stack website for Noël Chalet Alpine: a French language coaching business serving both Nigerian-based and international students.</p>
+      <p class="body-text">The website will establish a strong digital presence, streamline student enrollment, protect course resources, and position Noël Chalet Alpine as a credible, premium institution in French language education. This package uses a straightforward manual payment approach, keeping costs accessible and the workflow familiar for the coaching team.</p>
+    </div>
+
+    <!-- PAGES -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Pages and Structure</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:20px;">The website will consist of seven fully designed and developed pages, each serving a distinct purpose in the student journey.</p>
+      <div class="pages-grid">
+        <div class="page-item">
+          <p class="page-item-name">Home</p>
+          <p class="page-item-desc">Hero section with bold headline and Paris aesthetic. Quick stats covering students coached, exams passed, and countries reached. Featured program cards, testimonials strip, and a final call to action.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">About</p>
+          <p class="page-item-desc">Coach profile, credentials, and personal story. The vision and mission behind Noël Chalet Alpine, written to build trust with prospective students.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Programs and Services</p>
+          <p class="page-item-desc">Individual cards for each program: TEF, DELF/DALF, TFI, IGCSE, TEF CANADA, Travels and Tours, General French Fluency. Each card shows coverage, duration, price, and an enroll button.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Pricing</p>
+          <p class="page-item-desc">Clean pricing cards per program with enrollment buttons. All prices displayed clearly, with account details surfacing on selection.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Resources (Gated)</p>
+          <p class="page-item-desc">Accessible only after payment is confirmed by the coach. Contains audio-visuals, grammar drills, reading materials, and assignments. Protected by Supabase authentication and row-level security.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Virtual Classes</p>
+          <p class="page-item-desc">Weekly schedule showing program name, day, time, and platform (Zoom or Google Meet). A registration form collects student details and notifies the coach via email, who then sends the class link manually.</p>
+        </div>
+        <div class="page-item" style="grid-column: span 2 / span 2;">
+          <p class="page-item-name">Contact</p>
+          <p class="page-item-desc">WhatsApp CTA button that opens a pre-filled message to the admin, alongside a standard contact form for general enquiries.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT FLOW -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Payment Flow</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:24px;">This proposal uses a manual bank transfer approach, designed to align with how Nigerian students and the coaching team already operate. There are no transaction fees and no third-party payment platform required.</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">1</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Student selects a program</p>
+            <p class="flow-desc">The student browses the Programs or Pricing page and clicks the enroll button for their chosen course.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">2</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Account details are displayed</p>
+            <p class="flow-desc">The business bank account details (bank name, account number, account name) are clearly shown for the student to copy and make a transfer.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">3</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Student confirms payment</p>
+            <p class="flow-desc">After making the transfer, the student clicks the "I have sent the payment" button. A prompt appears with instructions to send proof of payment to the admin.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">4</span></div>
+          <div class="flow-body">
+            <p class="flow-title">WhatsApp evidence link opens</p>
+            <p class="flow-desc">A deep link automatically opens WhatsApp with the admin's number and a pre-filled message including the program name, ready for the student to attach their payment screenshot.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">5</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Coach verifies and grants access</p>
+            <p class="flow-desc">The coach confirms payment and updates the student record in the Supabase dashboard. The student receives login credentials and can access their gated resources immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Technology Stack</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:20px;">The website is built on a modern, scalable stack. Every technology choice prioritises performance, security, and ease of future updates.</p>
+      <div class="tech-grid">
+        <div class="tech-chip"><p class="tech-chip-name">Next.js 14</p><p class="tech-chip-role">Framework</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">TypeScript</p><p class="tech-chip-role">Language</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Tailwind CSS</p><p class="tech-chip-role">Styling</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Supabase</p><p class="tech-chip-role">Auth and Database</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Vercel</p><p class="tech-chip-role">Deployment</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">GitHub</p><p class="tech-chip-role">Version Control</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">GSAP</p><p class="tech-chip-role">Animations</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Nodemailer</p><p class="tech-chip-role">Email Notifications</p></div>
+      </div>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Database Structure</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:20px;">Student records, enrollments, and resources are managed via Supabase. Row-level security ensures each student only accesses content they have paid for.</p>
+      <table class="db-table">
+        <thead>
+          <tr>
+            <th>Table</th>
+            <th>Fields</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>students</td><td>id, name, email, phone, created_at</td></tr>
+          <tr><td>programs</td><td>id, name, description, price, duration</td></tr>
+          <tr><td>enrollments</td><td>id, student_id, program_id, payment_status, access_granted, created_at</td></tr>
+          <tr><td>resources</td><td>id, program_id, title, type (video, pdf, audio), url, created_at</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- INCLUDED -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">What is Included</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="features-list">
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Full 7-page website design and development</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Manual bank transfer payment flow</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">WhatsApp payment evidence redirect</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Supabase authentication and gated resources</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Student enrollment and registration system</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Virtual class schedule and registration form</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Email notifications via Nodemailer</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Mobile-first responsive design</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">GSAP scroll animations</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Domain name setup and Vercel deployment</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">12 months free maintenance included</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Up to 2 rounds of design revisions</span></div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Estimated Timeline</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-item"><p class="timeline-week">Week 1</p><p class="timeline-desc">Design mockups, brand direction, and page structure approval.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 2 and 3</p><p class="timeline-desc">Full development: all pages, authentication, and database setup.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 4</p><p class="timeline-desc">Payment flow, gated resources, email notifications, and testing.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 5</p><p class="timeline-desc">Review, revisions, domain setup, and go-live.</p></div>
+      </div>
+    </div>
+
+    <!-- INVESTMENT -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Investment</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="price-block">
+        <div class="price-block-bg"></div>
+        <div class="price-block-inner">
+          <p class="price-label">Total Investment</p>
+          <p class="price-naira">&#x20A6;750,000</p>
+          <p class="price-usd">Approximately $450 USD</p>
+          <p class="price-includes">Includes 12 months free maintenance and domain setup</p>
+          <div class="payment-plan">
+            <div class="plan-card">
+              <p class="plan-card-label">Deposit : 50%</p>
+              <p class="plan-card-amount">&#x20A6;375,000</p>
+              <p class="plan-card-when">Before work begins</p>
+            </div>
+            <div class="plan-card">
+              <p class="plan-card-label">Balance : 50%</p>
+              <p class="plan-card-amount">&#x20A6;375,000</p>
+              <p class="plan-card-when">Upon delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2 class="section-title">Terms and Conditions</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="terms-list">
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">A 50% deposit is required before project commencement. Work begins upon receipt of the deposit.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">Up to 2 rounds of revisions are included within the agreed scope.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">12 months of free maintenance begins from the date of website delivery. This covers bug fixes, minor content updates, and performance monitoring. Major feature additions are quoted separately.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">Domain name cost (approximately $15 per year) is the client's responsibility from year 2 onward.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">The client is responsible for providing all content: coach photos, program details, pricing, testimonials, and resource materials.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">This proposal is valid for 14 days from the date of issue: June 25, 2026.</p></div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2 class="section-title">Contact and Next Steps</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:24px;">To proceed with this proposal, please confirm your selection and make the initial deposit. Work begins immediately upon receipt. For any questions before committing, feel free to reach out directly.</p>
+      <div class="contact-block">
+        <div class="contact-grid">
+          <div class="contact-item"><span class="contact-item-label">Developer</span><span class="contact-item-value">David Ajibua</span></div>
+          <div class="contact-item"><span class="contact-item-label">Email</span><span class="contact-item-value">davidajibua78@gmail.com</span></div>
+          <div class="contact-item"><span class="contact-item-label">Phone and WhatsApp</span><span class="contact-item-value">07068634125</span></div>
+          <div class="contact-item"><span class="contact-item-label">Date Issued</span><span class="contact-item-value">June 25, 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="prop-footer">
+    Noël Chalet Alpine : Website Development Proposal 01 &nbsp;·&nbsp; Prepared by David Ajibua &nbsp;·&nbsp; June 25, 2026
+  </footer>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- PROPOSAL 2: FLUTTERWAVE                               -->
+<!-- ===================================================== -->
+<div id="proposal-2" class="proposal-view">
+
+  <nav class="prop-nav">
+    <span class="nav-brand">No<span>ë</span>l Chalet Alpine</span>
+    <div class="nav-right">
+      <span class="nav-tag p2">Proposal 02 : Flutterwave</span>
+      <button class="back-btn" onclick="goBack()">All Proposals</button>
+    </div>
+  </nav>
+
+  <div class="prop-hero">
+    <div class="prop-hero-bg"></div>
+    <div class="prop-hero-inner">
+      <p class="hero-eyebrow">Proposal 02 &nbsp;·&nbsp; Premium Package</p>
+      <h1 class="hero-title">Website Development<br><em>Flutterwave Integration</em></h1>
+      <p class="hero-desc">Everything in Proposal 01, plus a fully automated Flutterwave payment system. Nigerian and international students pay online in their currency of choice and receive instant, automatic access to course resources. No manual verification required.</p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Investment</span>
+          <span class="meta-value">&#x20A6;1,000,000</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <span class="meta-value">5 Weeks</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Maintenance</span>
+          <span class="meta-value">12 Months Free</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Domain</span>
+          <span class="meta-value">Included</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prop-content">
+
+    <!-- INTRO -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Introduction</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text">This proposal outlines the scope, design, and investment required to build a professional, full-stack website for Noël Chalet Alpine: a French language coaching business serving both Nigerian-based and international students.</p>
+      <p class="body-text">This premium package includes everything in Proposal 01, with the addition of a fully automated Flutterwave payment integration. Students pay online, and the system grants access to their course resources immediately, with no intervention required from the coaching team. This is the recommended option for a business with international reach and multiple programs running simultaneously.</p>
+    </div>
+
+    <!-- PAGES -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Pages and Structure</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:20px;">The website consists of seven fully designed and developed pages, each serving a distinct purpose in the student journey.</p>
+      <div class="pages-grid">
+        <div class="page-item">
+          <p class="page-item-name">Home</p>
+          <p class="page-item-desc">Hero section with bold headline and Paris aesthetic. Quick stats covering students coached, exams passed, and countries reached. Featured program cards, testimonials strip, and a final call to action.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">About</p>
+          <p class="page-item-desc">Coach profile, credentials, and personal story. The vision and mission behind Noël Chalet Alpine, written to build trust with prospective students.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Programs and Services</p>
+          <p class="page-item-desc">Individual cards for each program: TEF, DELF/DALF, TFI, IGCSE, TEF CANADA, Travels and Tours, General French Fluency. Each card shows coverage, duration, price, and an enroll button linked to Flutterwave.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Pricing</p>
+          <p class="page-item-desc">Clean pricing cards per program with direct Flutterwave payment buttons. Supports NGN, USD, EUR, GBP, CAD, and more.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Resources (Gated)</p>
+          <p class="page-item-desc">Automatically unlocked upon payment confirmation. Contains audio-visuals, grammar drills, reading materials, and assignments. Protected by Supabase authentication and row-level security.</p>
+        </div>
+        <div class="page-item">
+          <p class="page-item-name">Virtual Classes</p>
+          <p class="page-item-desc">Weekly schedule showing program name, day, time, and platform (Zoom or Google Meet). A registration form collects student details and notifies the coach via email.</p>
+        </div>
+        <div class="page-item" style="grid-column: span 2 / span 2;">
+          <p class="page-item-name">Contact</p>
+          <p class="page-item-desc">WhatsApp CTA button that opens a pre-filled message to the admin, alongside a standard contact form for general enquiries.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT FLOW -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Payment Flow</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:24px;">Flutterwave powers a fully automated payment experience. Students pay in their preferred currency and receive instant access to their purchased resources. The coach is notified of every successful enrollment automatically.</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">1</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Student selects a program</p>
+            <p class="flow-desc">The student browses the Programs or Pricing page and clicks the enroll button for their chosen course.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">2</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Flutterwave checkout opens</p>
+            <p class="flow-desc">A secure Flutterwave payment modal appears. The student pays using their card, bank transfer, or mobile money in NGN, USD, EUR, GBP, CAD, or any supported currency.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">3</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Webhook fires on successful payment</p>
+            <p class="flow-desc">Flutterwave sends a secure webhook notification to the website's API endpoint, confirming the payment and the specific program purchased.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">4</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Database is updated automatically</p>
+            <p class="flow-desc">The Next.js API route receives the webhook, validates it, and updates the student's enrollment record in Supabase. Access is granted instantly, with no manual action from the coach.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot"><span class="flow-dot-num">5</span></div>
+          <div class="flow-body">
+            <p class="flow-title">Student accesses resources immediately</p>
+            <p class="flow-desc">The student is redirected to their gated Resources page for the purchased program. All materials are available immediately upon payment confirmation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH STACK -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Technology Stack</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:20px;">The website is built on a modern, scalable stack. Every technology choice prioritises performance, security, and ease of future updates.</p>
+      <div class="tech-grid">
+        <div class="tech-chip"><p class="tech-chip-name">Next.js 14</p><p class="tech-chip-role">Framework</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">TypeScript</p><p class="tech-chip-role">Language</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Tailwind CSS</p><p class="tech-chip-role">Styling</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Supabase</p><p class="tech-chip-role">Auth and Database</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Flutterwave</p><p class="tech-chip-role">Payment Gateway</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Vercel</p><p class="tech-chip-role">Deployment</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">GSAP</p><p class="tech-chip-role">Animations</p></div>
+        <div class="tech-chip"><p class="tech-chip-name">Nodemailer</p><p class="tech-chip-role">Email Notifications</p></div>
+      </div>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Database Structure</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:20px;">All student records, enrollments, payment references, and resources are managed via Supabase. Row-level security ensures each student only accesses content for programs they have paid for.</p>
+      <table class="db-table">
+        <thead>
+          <tr>
+            <th>Table</th>
+            <th>Fields</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>students</td><td>id, name, email, phone, created_at</td></tr>
+          <tr><td>programs</td><td>id, name, description, price, duration</td></tr>
+          <tr><td>enrollments</td><td>id, student_id, program_id, payment_status, payment_reference, access_granted, created_at</td></tr>
+          <tr><td>resources</td><td>id, program_id, title, type (video, pdf, audio), url, created_at</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- INCLUDED -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">What is Included</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="features-list">
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Full 7-page website design and development</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Full Flutterwave payment integration</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Supports NGN, USD, EUR, GBP, CAD and more</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Webhook handling and automatic access grant</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Supabase authentication and gated resources</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Student enrollment and registration system</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Virtual class schedule and registration form</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Email notifications via Nodemailer</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Mobile-first responsive design</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">GSAP scroll animations</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">Domain name setup and Vercel deployment</span></div>
+        <div class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#5B1FA8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feature-text">12 months free maintenance included</span></div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Estimated Timeline</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-item"><p class="timeline-week">Week 1</p><p class="timeline-desc">Design mockups, brand direction, and page structure approval.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 2 and 3</p><p class="timeline-desc">Full development: all pages, authentication, and database setup.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 4</p><p class="timeline-desc">Flutterwave integration, webhook handling, gated resources, and testing.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 5</p><p class="timeline-desc">Review, revisions, domain setup, and go-live.</p></div>
+      </div>
+    </div>
+
+    <!-- INVESTMENT -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Investment</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="price-block">
+        <div class="price-block-bg"></div>
+        <div class="price-block-inner">
+          <p class="price-label">Total Investment</p>
+          <p class="price-naira">&#x20A6;1,000,000</p>
+          <p class="price-usd">Approximately $600 USD</p>
+          <p class="price-includes">Includes 12 months free maintenance and domain setup</p>
+          <div class="payment-plan">
+            <div class="plan-card">
+              <p class="plan-card-label">Deposit : 50%</p>
+              <p class="plan-card-amount">&#x20A6;500,000</p>
+              <p class="plan-card-when">Before work begins</p>
+            </div>
+            <div class="plan-card">
+              <p class="plan-card-label">Balance : 50%</p>
+              <p class="plan-card-amount">&#x20A6;500,000</p>
+              <p class="plan-card-when">Upon delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2 class="section-title">Terms and Conditions</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="terms-list">
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">A 50% deposit is required before project commencement. Work begins upon receipt of the deposit.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">Up to 2 rounds of revisions are included within the agreed scope.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">12 months of free maintenance begins from the date of website delivery. This covers bug fixes, minor content updates, and performance monitoring. Major feature additions are quoted separately.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">Domain name cost (approximately $15 per year) is the client's responsibility from year 2 onward.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">The client is responsible for providing all content: coach photos, program details, pricing, testimonials, and resource materials.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">Flutterwave transaction fees (approximately 1.4% per transaction) are charged by Flutterwave directly and are not part of this development fee.</p></div>
+        <div class="term-item"><div class="term-bullet"></div><p class="term-text">This proposal is valid for 14 days from the date of issue: June 25, 2026.</p></div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2 class="section-title">Contact and Next Steps</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="body-text" style="margin-bottom:24px;">To proceed with this proposal, please confirm your selection and make the initial deposit. Work begins immediately upon receipt. For any questions before committing, feel free to reach out directly.</p>
+      <div class="contact-block">
+        <div class="contact-grid">
+          <div class="contact-item"><span class="contact-item-label">Developer</span><span class="contact-item-value">David Ajibua</span></div>
+          <div class="contact-item"><span class="contact-item-label">Email</span><span class="contact-item-value">davidajibua78@gmail.com</span></div>
+          <div class="contact-item"><span class="contact-item-label">Phone and WhatsApp</span><span class="contact-item-value">07068634125</span></div>
+          <div class="contact-item"><span class="contact-item-label">Date Issued</span><span class="contact-item-value">June 25, 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="prop-footer">
+    Noël Chalet Alpine : Website Development Proposal 02 &nbsp;·&nbsp; Prepared by David Ajibua &nbsp;·&nbsp; June 25, 2026
+  </footer>
+</div>
+
+<script>
+  function openProposal(num) {
+    document.getElementById('selection-screen').style.display = 'none';
+    document.getElementById('proposal-' + num).classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  function goBack() {
+    document.querySelectorAll('.proposal-view').forEach(v => v.classList.remove('active'));
+    document.getElementById('selection-screen').style.display = 'flex';
+    window.scrollTo(0, 0);
+  }
+</script>
+</body>
+</html>
