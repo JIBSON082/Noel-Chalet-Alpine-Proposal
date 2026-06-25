@@ -650,6 +650,9 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
     }
+    .timeline-grid.five-col {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .timeline-item {
       background: var(--white);
@@ -837,6 +840,63 @@
       letter-spacing: 0.04em;
     }
 
+    /* PRICE BREAKDOWN TABLE */
+    .price-breakdown {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+    .price-breakdown thead tr { background: var(--ink); }
+    .price-breakdown thead th {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      padding: 11px 16px;
+      text-align: left;
+    }
+    .price-breakdown thead th:last-child { text-align: right; }
+    .price-breakdown tbody tr:nth-child(odd)  { background: var(--purple-tint); }
+    .price-breakdown tbody tr:nth-child(even) { background: var(--white); }
+    .price-breakdown tbody td {
+      padding: 11px 16px;
+      color: var(--ink-mid);
+      border-bottom: 1px solid var(--line);
+    }
+    .price-breakdown tbody td:last-child {
+      text-align: right;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--purple);
+    }
+    .price-breakdown tfoot tr { background: var(--ink); }
+    .price-breakdown tfoot td {
+      padding: 13px 16px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--white);
+    }
+    .price-breakdown tfoot td:last-child { text-align: right; color: var(--gold); }
+    .maintenance-row td { background: var(--gold-lite) !important; }
+    .maintenance-row td:first-child { color: var(--ink-mid); }
+    .strike { text-decoration: line-through; color: var(--muted); margin-right: 8px; }
+    .free-badge {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
     /* UTIL */
     .text-gold  { color: var(--gold); }
     .text-purple { color: var(--purple); }
@@ -890,7 +950,7 @@
         <h2 class="card-title">Manual Payment Integration</h2>
         <p class="card-desc">Full website with bank transfer payment flow. Students copy account details, confirm payment via WhatsApp, and the coach grants access manually. Clean, familiar, and zero transaction fees.</p>
         <p class="card-price">&#x20A6;750,000</p>
-        <p class="card-price-usd">Approximately $450 USD</p>
+        <p class="card-price-usd">Approximately $550 USD &nbsp;·&nbsp; 6 Weeks</p>
         <span class="card-cta">View Proposal &rarr;</span>
       </div>
 
@@ -901,14 +961,14 @@
         <h2 class="card-title">Flutterwave Integration</h2>
         <p class="card-desc">Full website with automated Flutterwave payments. Students pay online in NGN or foreign currency and receive instant access to resources. No manual verification required.</p>
         <p class="card-price">&#x20A6;1,000,000</p>
-        <p class="card-price-usd">Approximately $600 USD</p>
+        <p class="card-price-usd">Approximately $750 USD &nbsp;·&nbsp; 8 Weeks</p>
         <span class="card-cta">View Proposal &rarr;</span>
       </div>
 
     </div>
   </div>
 
-  <p class="selection-footer">Both proposals include 12 months free maintenance and domain setup &nbsp;·&nbsp; </p>
+  <p class="selection-footer">Both proposals include 12 months free maintenance and domain setup &nbsp;·&nbsp; Valid for 14 days from date of issue</p>
 </div>
 
 
@@ -938,7 +998,7 @@
         </div>
         <div class="meta-item">
           <span class="meta-label">Timeline</span>
-          <span class="meta-value">5 Weeks</span>
+          <span class="meta-value">6 Weeks</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Maintenance</span>
@@ -1127,10 +1187,10 @@
         <div class="section-line"></div>
       </div>
       <div class="timeline-grid">
-        <div class="timeline-item"><p class="timeline-week">Week 1</p><p class="timeline-desc">Design mockups, brand direction, and page structure approval.</p></div>
-        <div class="timeline-item"><p class="timeline-week">Weeks 2 and 3</p><p class="timeline-desc">Full development: all pages, authentication, and database setup.</p></div>
-        <div class="timeline-item"><p class="timeline-week">Week 4</p><p class="timeline-desc">Payment flow, gated resources, email notifications, and testing.</p></div>
-        <div class="timeline-item"><p class="timeline-week">Week 5</p><p class="timeline-desc">Review, revisions, domain setup, and go-live.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 1</p><p class="timeline-desc">UI/UX design mockups, brand direction, and page structure approval.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 2 and 3</p><p class="timeline-desc">Full frontend and backend development: all pages, authentication, and database setup.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 4</p><p class="timeline-desc">Manual payment flow, gated resources, email notifications, and internal testing.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 5 and 6</p><p class="timeline-desc">Client review, revisions, domain setup, final QA, and go-live.</p></div>
       </div>
     </div>
 
@@ -1141,13 +1201,65 @@
         <h2 class="section-title">Investment</h2>
         <div class="section-line"></div>
       </div>
+      <table class="price-breakdown">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>UI/UX Design</strong></td>
+            <td>Wireframes, design system, all 7 page designs, mobile-first layouts</td>
+            <td>&#x20A6;150,000</td>
+          </tr>
+          <tr>
+            <td><strong>Frontend Development</strong></td>
+            <td>Next.js 14, TypeScript, Tailwind CSS, GSAP animations, responsive build</td>
+            <td>&#x20A6;200,000</td>
+          </tr>
+          <tr>
+            <td><strong>Backend and Auth</strong></td>
+            <td>Supabase setup, authentication, row-level security, API routes</td>
+            <td>&#x20A6;150,000</td>
+          </tr>
+          <tr>
+            <td><strong>Manual Payment Flow</strong></td>
+            <td>Account details display, confirmation button, WhatsApp deep link integration</td>
+            <td>&#x20A6;80,000</td>
+          </tr>
+          <tr>
+            <td><strong>Gated Resources System</strong></td>
+            <td>Protected resources page, access control per program, student dashboard</td>
+            <td>&#x20A6;100,000</td>
+          </tr>
+          <tr>
+            <td><strong>Deployment and Domain</strong></td>
+            <td>Vercel deployment, custom domain setup, environment configuration</td>
+            <td>&#x20A6;70,000</td>
+          </tr>
+          <tr class="maintenance-row">
+            <td><strong>12 Months Maintenance</strong></td>
+            <td>&#x20A6;30,000 x 12 months: bug fixes, content updates, performance monitoring</td>
+            <td><span class="strike">&#x20A6;360,000</span> <span class="free-badge">Free</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total Investment &nbsp;·&nbsp; $550 USD</td>
+            <td>&#x20A6;750,000</td>
+          </tr>
+        </tfoot>
+      </table>
       <div class="price-block">
         <div class="price-block-bg"></div>
         <div class="price-block-inner">
           <p class="price-label">Total Investment</p>
           <p class="price-naira">&#x20A6;750,000</p>
-          <p class="price-usd">Approximately $450 USD</p>
-          <p class="price-includes">Includes 12 months free maintenance and domain setup</p>
+          <p class="price-usd">$550 USD &nbsp;·&nbsp; Maintenance worth &#x20A6;360,000 included free</p>
+          <p class="price-includes">Domain setup included &nbsp;·&nbsp; 6 weeks delivery</p>
           <div class="payment-plan">
             <div class="plan-card">
               <p class="plan-card-label">Deposit : 50%</p>
@@ -1177,7 +1289,6 @@
         <div class="term-item"><div class="term-bullet"></div><p class="term-text">12 months of free maintenance begins from the date of website delivery. This covers bug fixes, minor content updates, and performance monitoring. Major feature additions are quoted separately.</p></div>
         <div class="term-item"><div class="term-bullet"></div><p class="term-text">Domain name cost (approximately $15 per year) is the client's responsibility from year 2 onward.</p></div>
         <div class="term-item"><div class="term-bullet"></div><p class="term-text">The client is responsible for providing all content: coach photos, program details, pricing, testimonials, and resource materials.</p></div>
-        <div class="term-item"><div class="term-bullet"></div><p class="term-text">This proposal is valid for 14 days from the date of issue: June 25, 2026.</p></div>
       </div>
     </div>
 
@@ -1233,7 +1344,7 @@
         </div>
         <div class="meta-item">
           <span class="meta-label">Timeline</span>
-          <span class="meta-value">5 Weeks</span>
+          <span class="meta-value">8 Weeks</span>
         </div>
         <div class="meta-item">
           <span class="meta-label">Maintenance</span>
@@ -1421,11 +1532,12 @@
         <h2 class="section-title">Estimated Timeline</h2>
         <div class="section-line"></div>
       </div>
-      <div class="timeline-grid">
-        <div class="timeline-item"><p class="timeline-week">Week 1</p><p class="timeline-desc">Design mockups, brand direction, and page structure approval.</p></div>
-        <div class="timeline-item"><p class="timeline-week">Weeks 2 and 3</p><p class="timeline-desc">Full development: all pages, authentication, and database setup.</p></div>
-        <div class="timeline-item"><p class="timeline-week">Week 4</p><p class="timeline-desc">Flutterwave integration, webhook handling, gated resources, and testing.</p></div>
-        <div class="timeline-item"><p class="timeline-week">Week 5</p><p class="timeline-desc">Review, revisions, domain setup, and go-live.</p></div>
+      <div class="timeline-grid five-col">
+        <div class="timeline-item"><p class="timeline-week">Week 1</p><p class="timeline-desc">UI/UX design mockups, brand direction, and page structure approval.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 2 and 3</p><p class="timeline-desc">Full frontend and backend development: all pages, authentication, and database setup.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Week 4</p><p class="timeline-desc">Flutterwave integration, webhook handling, gated resources, and email notifications.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 5 and 6</p><p class="timeline-desc">Internal testing, bug fixing, and security review of payment and access flows.</p></div>
+        <div class="timeline-item"><p class="timeline-week">Weeks 7 and 8</p><p class="timeline-desc">Client review, revisions, domain setup, final QA, and go-live.</p></div>
       </div>
     </div>
 
@@ -1436,13 +1548,65 @@
         <h2 class="section-title">Investment</h2>
         <div class="section-line"></div>
       </div>
+      <table class="price-breakdown">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>UI/UX Design</strong></td>
+            <td>Wireframes, design system, all 7 page designs, mobile-first layouts</td>
+            <td>&#x20A6;180,000</td>
+          </tr>
+          <tr>
+            <td><strong>Frontend Development</strong></td>
+            <td>Next.js 14, TypeScript, Tailwind CSS, GSAP animations, responsive build</td>
+            <td>&#x20A6;220,000</td>
+          </tr>
+          <tr>
+            <td><strong>Backend and Auth</strong></td>
+            <td>Supabase setup, authentication, row-level security, API routes</td>
+            <td>&#x20A6;180,000</td>
+          </tr>
+          <tr>
+            <td><strong>Flutterwave Integration</strong></td>
+            <td>Payment gateway setup, webhook handling, automatic access grant on payment</td>
+            <td>&#x20A6;180,000</td>
+          </tr>
+          <tr>
+            <td><strong>Gated Resources System</strong></td>
+            <td>Protected resources page, per-program access control, student dashboard</td>
+            <td>&#x20A6;120,000</td>
+          </tr>
+          <tr>
+            <td><strong>Deployment and Domain</strong></td>
+            <td>Vercel deployment, custom domain setup, environment configuration</td>
+            <td>&#x20A6;120,000</td>
+          </tr>
+          <tr class="maintenance-row">
+            <td><strong>12 Months Maintenance</strong></td>
+            <td>&#x20A6;35,000 x 12 months: bug fixes, content updates, performance monitoring</td>
+            <td><span class="strike">&#x20A6;420,000</span> <span class="free-badge">Free</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Total Investment &nbsp;·&nbsp; $750 USD</td>
+            <td>&#x20A6;1,000,000</td>
+          </tr>
+        </tfoot>
+      </table>
       <div class="price-block">
         <div class="price-block-bg"></div>
         <div class="price-block-inner">
           <p class="price-label">Total Investment</p>
           <p class="price-naira">&#x20A6;1,000,000</p>
-          <p class="price-usd">Approximately $600 USD</p>
-          <p class="price-includes">Includes 12 months free maintenance and domain setup</p>
+          <p class="price-usd">$750 USD &nbsp;·&nbsp; Maintenance worth &#x20A6;420,000 included free</p>
+          <p class="price-includes">Domain setup included &nbsp;·&nbsp; 8 weeks delivery</p>
           <div class="payment-plan">
             <div class="plan-card">
               <p class="plan-card-label">Deposit : 50%</p>
@@ -1473,7 +1637,6 @@
         <div class="term-item"><div class="term-bullet"></div><p class="term-text">Domain name cost (approximately $15 per year) is the client's responsibility from year 2 onward.</p></div>
         <div class="term-item"><div class="term-bullet"></div><p class="term-text">The client is responsible for providing all content: coach photos, program details, pricing, testimonials, and resource materials.</p></div>
         <div class="term-item"><div class="term-bullet"></div><p class="term-text">Flutterwave transaction fees (approximately 1.4% per transaction) are charged by Flutterwave directly and are not part of this development fee.</p></div>
-        <div class="term-item"><div class="term-bullet"></div><p class="term-text">This proposal is valid for 14 days from the date of issue: June 25, 2026.</p></div>
       </div>
     </div>
 
