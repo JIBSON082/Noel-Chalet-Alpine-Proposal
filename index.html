@@ -968,7 +968,7 @@
     </div>
   </div>
 
-  <p class="selection-footer">Both proposals include 12 months free maintenance and domain setup &nbsp;</p>
+  <p class="selection-footer">Both proposals include 12 months free maintenance and domain setup &nbsp;·&nbsp; Valid for 14 days from date of issue</p>
 </div>
 
 
@@ -1666,10 +1666,16 @@
 </div>
 
 <script>
+  // Set initial history state so we know we're on the selection screen
+  history.replaceState({ page: 'selection' }, '');
+
   function openProposal(num) {
     document.getElementById('selection-screen').style.display = 'none';
+    document.querySelectorAll('.proposal-view').forEach(v => v.classList.remove('active'));
     document.getElementById('proposal-' + num).classList.add('active');
     window.scrollTo(0, 0);
+    // Push a new history entry so the phone back button can intercept it
+    history.pushState({ page: 'proposal', num: num }, '');
   }
 
   function goBack() {
@@ -1677,6 +1683,15 @@
     document.getElementById('selection-screen').style.display = 'flex';
     window.scrollTo(0, 0);
   }
+
+  // Intercept the phone/browser back button
+  window.addEventListener('popstate', function(e) {
+    if (e.state && e.state.page === 'selection') {
+      goBack();
+    } else if (!e.state || e.state.page === 'selection') {
+      goBack();
+    }
+  });
 </script>
 </body>
 </html>
